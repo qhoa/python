@@ -16,7 +16,7 @@ while n > 0:
     if result == 0:
         print(n,".","Port is open", server, "at", datetime.now().time())
     else:
-        print("Port is close", server, "at", datetime.now().time())
+        print(n,".","Port is close", server, "at", datetime.now().time())
     sock.close()
 else:
     print("End !!!!!")
