@@ -51,4 +51,8 @@ for i in range(1, 20):
         continue
     print(i)
 '''
-## Bài tập (1) in ra toàn bộ ký tự
+## Bài tập (1) in ra toàn bộ ký tự với từ nhập vào là "sunny"
+s = input()
+for c in s:
+    if c == 'y':
+        print("Current character:", c)
