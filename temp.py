@@ -35,7 +35,7 @@ for i in range(n):
     tong += list[i]
 print("Tổng giá trị các phần tử trong mảng = ", tong)'''
 # len () cho phép trả lại giá trị số lượng phần tử có trong mảng
-list = [2, 3 , 1, 5, 6]
+list = [2, 3, 1, 5, 6]
 '''print(len(list))
 # Đếm và liệt kê các phần tử trong mảng
 for i in range(len(list)):
@@ -148,10 +148,133 @@ print(s2[0:2] + s2[-2] + s2[-1])
 s1 = "apple"
 s2 = "banana"
 print(s2[:2] + s1[2:])
-print(s1[:2] + s2[2:])'''
+print(s1[:2] + s2[2:])
 s = "toi hoc python 2021"
 r = s.split(" ")
 print(r)
 r.reverse()
 print(" ".join(r))
 
+## Định nghĩa hàm ví dụ
+def show():
+    for i in range(1, 11):
+        print(i, end=" ") # end=" " có nghĩa hiển thị trên một dòng
+#        print(i) # in xuống dòng
+show()
+## Viết hàm tỉnh tổng các phần tử trong mảng
+def sum(lst): # hàm tính tổng các phần tử trong mảng
+    tong = 0
+    for i in lst:
+        tong += i
+    return tong
+n = int(input())
+lst = []
+for i in range(n):
+    lst.append(int(input()))
+print(sum(lst))
+#print()
+#print(sum([1, 2, 3]))
+#print(sum([4, 6 ,3]))
+# Viết hàm đếm số chẵn trong mảng nhập vào
+def odd_number(lst):
+    count = 0
+    for i in lst:
+        if i % 2 == 0:
+            count += 1
+    return count
+lst = [2, 4, 8, 7, 9, 10]
+print(odd_number(lst))
+## Viết hàm nhập vào 3 số và so sánh số lớn nhất.
+a = int(input())
+b = int(input())
+c = int(input())
+
+def max_number(a, b, c):
+    if a > b and a > c:
+        return a
+    elif b > a and b > c:
+        return b
+    else:
+        return c
+print(max_number(a, b, c))
+lst = [55, 6, 10, 3, 99]
+def max_number(lst):
+    max = lst[0]
+    for i in lst:
+        if i > max:
+            max = i
+    return max
+print(max_number(lst))
+def count(s):
+    count_lower = 0
+    count_upper = 0
+    for i in s:
+        if i.islower():
+            count_lower += 1
+        elif i.isupper():
+            count_upper += 1
+    print("Given string:", s)
+    print("Number of uppercase letters:", count_upper)
+    print("Number of lowercase letters:", count_lower)
+
+s = str(input())
+count(s)
+## Bài tập 49
+Write a function that takes a list as an argument and returns a list containing unique values that appear in the list.
+
+Example:
+
+For lst = [1,2,3,3,3,3,4,5], the output should be [1,2,3,4,5]
+For lst = [1,1,2,2,3,3,3,3,4,4,4,4,5,5], the output should be [1,2,3,4,5]
+For lst = [1, 1, 1], the output should be [1]
+lst = [1,2,3,3,3,3,4,5]
+temp = []
+for i in lst:
+    if i not in temp:
+        temp.append(i)
+print(temp)
+# Bài 50
+Write a Python program that accepts a natural number n from the user and checks whether that number is a prime number. If n is a prime number, return True, return False otherwise. 
+
+A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers. 2, 3, 5, 7, 11, 13, 17,... are prime numbers.
+
+Example
+
+For n = 9, the output should be False
+For n = 3, the output should be True
+def is_prime(n):
+    if n == 3:
+        return True
+    elif n % 2 == 0 or n % 3 == 0:
+        return False
+    else:
+        return True
+
+n = int(input())
+print(is_prime(n))
+
+def is_prime(n):
+    count = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            count += 1
+    if count == 2:
+        return True
+    return False
+
+
+n = int(input())
+print(is_prime(n))'''
+def is_prime(n):
+    i = 1
+    count = 0
+    while i <= n:
+        if n % i == 0:
+            count += 1
+        i += 1
+    print(count)
+    if count == 2:
+        return True
+    return False
+n = int(input())
+print(is_prime(n))

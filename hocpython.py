@@ -317,7 +317,7 @@ print("-".join(j))
 r = "T0i h0c pyth0n"
 print(r.replace("0", "o"))
 
-# Bài 43 nhập vào chuỗi in ra màn hình 2 ký tự đầu và 2 ký tự cuối của chuỗi.
+# Bài 43 Codelearn nhập vào chuỗi in ra màn hình 2 ký tự đầu và 2 ký tự cuối của chuỗi.
 s = input()
 if len(s) >= 2:
     print(s[0:2] + s[-2] + s[-1])
@@ -325,7 +325,7 @@ if len(s) >= 2:
 else:
     print("")
 
-# Bài 44 nhập vào 2 chuỗi, in ra màn hình đảo 2 ký tự đầu của 2 chuỗi và ghép lại
+# Bài 44 Codelearn nhập vào 2 chuỗi, in ra màn hình đảo 2 ký tự đầu của 2 chuỗi và ghép lại
 # "sun" "moon" = "mon suon"
 s1 = input()
 s2 = input()
@@ -334,8 +334,122 @@ r1 = s2[:2] + s1[2:]
 r2 = s1[:2] + s2[2:]
 print(r1 + " " + r2)
 
-# Bài 45 nhập vào chuỗi và đảo ngược lại toàn bộ phần tử của chuỗi. "this is a apple" ==> "apple a is this"
+# Bài 45 Codelearn nhập vào chuỗi và đảo ngược lại toàn bộ phần tử của chuỗi. "this is a apple" ==> "apple a is this"
 s = str(input())
 r = s.split(" ") #Chuyển chuỗi sang mảng
 r.reverse()  # đảo ngược sắp xếp lại giá trị của mảng
 print(" ".join(r)) # ghép lại mảng thành chuỗi
+
+# Bài 46 Codelearn học định nghĩa về hàm
+## Định nghĩa hàm ví dụ
+def show():
+    for i in range(1, 11):
+        print(i, end=" ") # end=" " có nghĩa hiển thị trên một dòng
+#        print(i) # in xuống dòng
+show()
+## Viết hàm tỉnh tổng các phần tử trong mảng
+def sum(lst): # hàm tính tổng các phần tử trong mảng
+    tong = 0
+    for i in lst:
+        tong += i
+    return tong
+n = int(input())
+lst = []
+for i in range(n):
+    lst.append(int(input()))
+print(sum(lst))
+#print()
+#print(sum([1, 2, 3]))
+#print(sum([4, 6 ,3]))
+
+## Viết hàm đếm số chẵn trong mảng
+def odd_number(lst):
+    count = 0
+    for i in lst:
+        if i % 2 == 0:
+            count += 1
+    return count
+lst = [2, 4, 8, 7, 9, 10]
+print(odd_number(lst))
+# Bài 47 Codelearn so sánh và bài tập
+## Viết hàm nhập vào 3 số và so sánh số lớn nhất.
+a = int(input())
+b = int(input())
+c = int(input())
+
+def max_number(a, b, c):
+    if a > b and a > c:
+        return a
+    elif b > a and b > c:
+        return b
+    else:
+        return c
+print(max_number(a, b, c))
+
+## Bài tập mở rộng viết hàm tìm số lớn nhất trong mảng
+lst = [55, 6, 10, 3, 99]
+def max_number(lst):
+    max = lst[0]
+    for i in lst:
+        if i > max:
+            max = i
+    return max
+print(max_number(lst))
+
+# Bài 48 Codelearn viết hàm đếm chữ hoa , chữ thường trong chuỗi ký tự nhập vào từ bàn phím.
+def count(s):
+    count_lower = 0
+    count_upper = 0
+    for i in s:
+        if i.islower():
+            count_lower += 1
+        elif i.isupper():
+            count_upper += 1
+    print("Given string:", s)
+    print("Number of uppercase letters:", count_upper)
+    print("Number of lowercase letters:", count_lower)
+
+s = str(input())
+count(s)
+
+# Bài 49 Codelearn viết hàm tìm giá trị duy nhất.
+def get_unique_values(lst):
+    temp = []
+    for i in lst:
+        if i not in temp: # Sử dụng not in để kiểm tra phần tử có trong mảng tạm hay không.
+            temp.append(i)
+    return temp
+
+n = int(input())
+lst = []
+for i in range(n):
+    lst.append(int(input()))
+print(get_unique_values(lst))
+
+# Bài 50 Codelearn tìm số nguyên tố.
+## Cách giải(1)
+def is_prime(n):
+    i = 1
+    count = 0
+    while i <= n:
+        if n % i == 0:
+            count += 1
+        i += 1
+    print(count)
+    if count == 2:
+        return True
+    return False
+n = int(input())
+print(is_prime(n))
+
+# Cách giải (2)
+def is_prime(n):
+    if n == 3:
+        return True
+    elif n % 2 == 0 or n % 3 == 0:
+        return False
+    else:
+        return True
+
+n = int(input())
+print(is_prime(n))
