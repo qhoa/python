@@ -87,6 +87,31 @@ a = int(input())
 b = int(input())
 print("a % b =", str(a % b))
 
+# Bài 16 Codelearn nhập thông tin và tính toán, in ra kết quả của phép toán a và b
+
+a = int(input())
+b = int(input())
+print("a + b = " + str(a + b))
+print("a - b = " + str(a - b))
+print("a * b = " + str(a * b))
+print("a / b = " + str(a / b))
+print("a % b = " + str(a % b))
+
+# Bài 17 Codelearn nhập thông tin và tính toán, in ra kết quả hoán đổi của 2 giá trị a và b
+
+a = int(input())
+b = int(input())
+c = a
+a = b
+b = c
+print("after swap a = " + str(a) + ", b = " + str(b))
+
+# Bài 18 Codelearn nhập thông tin và tính toán, in ra kết quả tính toán có số thập phân
+
+r = float(input())
+print("Circumference = " + str(2 * 3.14 * r))
+
+
 # Bài 31 Codelearn kiến thức vòng lặp while.
 '''
 n = int(input())
@@ -168,3 +193,149 @@ tong = 0
 for i in range(1, n + 1):
     tong += i / (i + 1)
 print(round(tong, 2))
+
+# Bài 37 Codelearn học về mảng, array list
+## (1) cấu trúc nhập số và gán vào mảng
+n = int(input("Xin vui lòng nhập vào : ")) # nhập vào số lượng phần tử của mảng
+list = []
+for i in range(n):
+    list.append(int(input())) # gán giá trị nhập vào từng phần tử của mảng
+print(list)
+## (2) tìm số nhỏ nhất trong mảng
+n = int(input())
+lst = []
+for i in range(n):
+    lst.append(int(input()))
+nho_nhat = lst[0]
+for i in lst:
+    if i < nhonhat: # so sánh các phần tử với phần từ đầu tiên của mảng, nếu nhỏ hơn thì gán giá trị vào chính phần tử so sánh
+        nho_nhat = i
+print(nhonhat)
+
+# Bài 38 Codelearn học về mảng, thực hành tính tổng các giá trị của mảng.
+n = int(input("Nhập vào số phần tử của mảng: "))
+list = []
+tong = 0
+for i in range(n):
+    list.append(int(input()))
+    tong += list[i]
+print("Tổng giá trị các phần tử trong mảng = ", tong)
+
+# Bài 39 Codelearn học về mảng, lý thuyết xắp xếp và bài tập.
+''''
+# 1. len () cho phép trả lại giá trị số lượng phần tử có trong mảng
+list = [2, 3 , 1, 5, 6]
+print(len(list))
+# Đếm và liệt kê các phần tử trong mảng
+for i in range(len(list)):
+    print(list[i])
+# 2. max() và min() phần tử trong mảng
+print(max(list))
+print(min(list))
+# 3. insert() thêm giá trị vào trong mảng ( thêm giá trị 99 vào vị trí số 3 trong mảng )
+list.insert(2, 99)
+print(list)
+# 4. remove() xóa phần tử trong mảng có giá trị 99.
+list.remove(99)
+print(list)
+# 5. pop() xóa phần tử tại vị trí trong mảng.
+list.pop(2)
+print(list)
+# 6. sort() xắp xếp các giá trị trong mảng
+list.sort()
+print(list)
+list.sort(reverse=True)
+print(list)
+# 7. reverse() đảo ngược các phần tử trong mảng.
+list.reverse()
+print(list)
+# 8. count() đếm phần tử được định nghĩa sẵn
+print(list.count(2))
+# 9. clear() xóa sạch
+list.clear()
+print(list)'''
+## Bài tập liệt kê danh sách các phần tử mảng và sắp xếp theo thứ tự tăng dần
+n = int(input())
+list = []
+for i in range(n):
+    list.append(int(input()))
+for i in list:
+    list.sort()
+    print(list)
+
+# Bài 40 Codelearn viết chương trình in ra số lẻ trong mảng.
+n = int(input())
+odd_number = []
+list = []
+for i in range(n):
+    list.append(int(input()))
+for i in list:
+    if i % 2 != 0:
+        odd_number.append(i)
+print(odd_number)
+
+# Bài 41 Codelearn viết chương trình chia hết cho 5 và in ra trong chuỗi, nếu không có số nào thì trả lại kết quả [0]
+n = int(input())
+list = []
+for i in range(n):
+    list.append(int(input()))
+div5 = []
+for i in list:
+    if i % 5 == 0:
+        div5.append(i)
+if len(div5) == 0:
+    div5 = [0]
+print(div5)
+
+# Bài 42 Codelearn chuỗi string
+# 1. len () đến tổng số lượng phần tử trong chuối
+# 2. lower() chuyển toàn bộ upcase sang lowcase
+s = "TOIHOCPYTHON"
+print(s.lower())
+# 3. upper() chuyển toàn bộ lower sang upper
+c = "toihocpython"
+print(s.upper())
+# 4. isalnum() kiểm tra toàn bộ chuỗi là số hay chữ trả lại kết quả true / false
+str = "Toihocpython2021"
+print(str.isalnum())
+str = "Toihocpython@2021"
+print(str.isalnum())
+# 5. isalpha kiểm tra toàn bộ chuối là chữ
+print(str.isalpha())
+# 6. isnumeric() kiểm tra toàn bộ chuỗi là số
+print(str.isnumeric())
+# 7. split() cắt chuỗi
+spl = "Toi hoc python 2021"
+print(spl.split(" "))
+spl = "A1B1C1D1E1"
+print(spl.split("1"))
+# 8. join() ghép chuỗi
+j = ['Toi', 'hoc', 'python', '2021']
+print(" ".join(j))
+print("-".join(j))
+# 9. replace() thay thế chuỗi
+r = "T0i h0c pyth0n"
+print(r.replace("0", "o"))
+
+# Bài 43 nhập vào chuỗi in ra màn hình 2 ký tự đầu và 2 ký tự cuối của chuỗi.
+s = input()
+if len(s) >= 2:
+    print(s[0:2] + s[-2] + s[-1])
+    print(s[0:2] + s[-2:])
+else:
+    print("")
+
+# Bài 44 nhập vào 2 chuỗi, in ra màn hình đảo 2 ký tự đầu của 2 chuỗi và ghép lại
+# "sun" "moon" = "mon suon"
+s1 = input()
+s2 = input()
+
+r1 = s2[:2] + s1[2:]
+r2 = s1[:2] + s2[2:]
+print(r1 + " " + r2)
+
+# Bài 45 nhập vào chuỗi và đảo ngược lại toàn bộ phần tử của chuỗi. "this is a apple" ==> "apple a is this"
+s = str(input())
+r = s.split(" ") #Chuyển chuỗi sang mảng
+r.reverse()  # đảo ngược sắp xếp lại giá trị của mảng
+print(" ".join(r)) # ghép lại mảng thành chuỗi
