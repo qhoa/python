@@ -111,6 +111,186 @@ print("after swap a = " + str(a) + ", b = " + str(b))
 r = float(input())
 print("Circumference = " + str(2 * 3.14 * r))
 
+# Bài 19 Codelearn toán tử cơ bản
+## Ví dụ (1)
+x = 15
+y = 4
+
+print('x + y =', x+y) # Cộng
+print('x - y =', x-y) # Trừ
+print('x * y =', x*y) # Nhân
+print('x / y =', x/y) # Chia
+print('x % y =', x % y) # Chia hết lấy phần dư 7 % 3 = 1
+print('x // y =', x//y) # Chia hết lấy phần nguyên 7 // 3 = 2
+print('x ** y =', x**y) # Số mũ 2**3 = 8
+
+## bài tập (1) tính diện tích hình tam giác
+a = int(input())
+h = int(input())
+'''
+area = 1/2 * a * h
+'''
+area = (a * h)/2
+print("The area of triangle is",+ area)
+
+# Bài 20 Codelearn toán tử cơ bản, tính số mũ
+a = int(input())
+b = int(input())
+print(str(a**b))
+
+# Bài 21 Codelearn toán tử cơ bản, toán tử so sánh trả lại kết quả true/false
+# Ví dụ (1)
+x = 10
+y = 12
+
+print('x > y is', x > y) #false
+print('x < y is', x < y) #true
+print('x == y is', x == y) #false
+print('x != y is', x != y) #true
+print('x >= y is', x >= y) #false
+print('x <= y is', x <= y) #true
+# bài tập (1)
+x = int(input())
+y = int(input())
+
+print("x > y:", x > y)
+
+# Bài 22 Codelearn toán tử cơ bản, giá trị gán
+a = int(input())
+Total = int(input())
+Total += a # Using += Operator ( tăng vế trái 1 phần bằng vế phải, rồi gán giá trị cho vế trái )
+print("The Value of the Total after using += Operator is:", Total)
+Total -= a # Using -= Operator ( giảm vế trái 1 phần bằng vế phải, rồi gán giá trị cho vế trái )
+print("The Value of the Total after using -= Operator is:", Total)
+Total *= a # Using *= Operator ( nhân vế trái với vế phải, rồi gán giá trị cho vế trái )
+print("The Value of the Total after using *= Operator is:", Total)
+Total //= a # Using //= Operator ( lấy vế trái chia cho vế phải lấy phần nguyên rồi lấy kết quả gán cho vế trái )
+print("The Value of the Total after using //= Operator is:", Total)
+Total **= a # Using **= Operator ( lấy vế trái vứi bậc lũy thừa là giá trị vế phải rồi kết quả giá trị cho vế trái )
+print("The Value of the Total after using **= Operator is:", Total)
+Total /= a # Using /= Operator ( chia vế trái cho vế phải, rồi gán giá trị cho vế trái )
+print("The Value of the Total after using /= Operator is:", Total)
+Total %= a # Using %= Operator ( lấy vế trái chia cho vế phải lấy phần dư và lấy kết quả gán giá trị cho vế trái )
+print("The Value of the Total after using %= Operator is:", Total)
+
+# Bài 23 Codelearn toán tử cơ bản, kiểm tra ký tự H có trong chuối sử dụng in trả lại kết quả true/false
+x = input()
+print('H' in x)
+
+# Bài 24 Codelearn toán tử cơ bản, toán tử định danh trả lại kết quả true/false ( a = b true , a # b false )
+a = int(input())
+b = int(input())
+
+print(a is b)
+print(a is not b)
+
+# Bài 25 Codelearn toán tử cơ bản, and or not kết hợp điều kiện
+## Ví dụ : kết hợp "and" T(T+T) F(F+F) | F(T+F) . "or" T(T+F) T(T+T)| F(F+F) . not T(F) F(T)
+x = True
+y = False
+print(x and y) # Kết quả false
+print(x or y) # Kết quả true
+print(not x) # kết quả false
+
+# bài tập (1)
+x = int(input())
+y = int(input())
+z = int(input())
+t = int(input())
+
+print("Result evaluation is", (x > y) and (z < t))
+
+# Bài 26 Codelearn các câu lệnh điều kiện
+## Ví dụ (1)
+n = int(input())
+if n % 2 == 0:
+    # If n is an even number, print "n is an even number"
+    print("n is an even number")
+else:
+    # Otherwise, if n is an odd number, print "n is an odd number"
+    print("n is an odd number")
+## Ví dụ (2)
+a, b = 10, 20
+
+if a != b:
+	if a > b:
+		print("a is greater than b")
+	else:
+		print("b is greater than a")
+else:
+	print("Both a and b are equal")
+## bài tập hiển thị màn hình tuổi của mèo
+age = int(input())
+if age < 5:
+    print("Your cat is young")
+else :
+    print("Your cat is old")
+
+# Bài 27 Codelearn các câu lệnh điều kiện, cú phép kết hợp if/elif/else
+## bài tập nhiệt độ
+temperature = int(input())
+
+if temperature >= 100:
+    print("Stay at home and enjoy a good movie")
+elif temperature >= 92:
+    print("Stay at home")
+elif temperature == 75:
+    print("Go outside and enjoy the weather")
+elif temperature <= 0:
+    print("It's cool outside")
+else:
+    print("Let's go to school")
+
+# Bài 28 Codelearn các câu lệnh điều kiện,
+## bài tập nếu x là số chẵn thì kiểm tra giá trị y >= 20 hay nhỏ hơn, nếu x là số lẻ thì kiểm tra giá trị z >= 30 hoặc nhỏ hơn
+x = int(input())
+y = int(input())
+z = int(input())
+
+if x % 2 == 0:
+    if y >= 20:
+        print("y is greater than or equal to 20")
+    else:
+        print("y is less than 20")
+else:
+    if z >= 30:
+        print("z is greater than or equal to 30")
+    else:
+        print("z is less than 30")
+
+# Bài 29 Codelearn các câu lệnh điều kiện,
+## Bài tập so sánh trung bình của 3 số
+a = int(input())
+b = int(input())
+c = int(input())
+avg = (a + b + c)/3
+
+
+if avg > a and avg > b:
+    print("The average value is greater than both a and b")
+elif avg > a and avg > c:
+    print("The average value is greater than both a and c")
+elif avg > b and avg > c:
+    print("The average value is greater than both b and c")
+elif avg > a:
+    print("The average value is greater than a")
+elif avg > b:
+    print("The average value is greater than b")
+elif avg > c:
+    print("The average value is greater than c")
+
+# Bài 30 Codelearn các câu lệnh điều kiện
+## bài tập tuổi vật nuôi
+age = int(input())
+
+if age <= 0:
+    print("This can hardly be true")
+elif age == 1:
+    print("About 1 human year")
+elif age == 2:
+    print("About 2 human years")
+else:
+    print("Over 5 human years")
 
 # Bài 31 Codelearn kiến thức vòng lặp while.
 '''
@@ -555,3 +735,33 @@ def format(s):
     else:
         print(s)
 format(s)
+
+# Bài 58 Codelearn thực hành tính tổng các ước số của số nhập vào từ bàn phím 8 => 1 + 3 + 4 = 7
+n = int(input())
+
+def sumOfAll(n):
+    res = []
+    total = 0
+    for i in range(1, n): # Bỏ qua giá trị n là chính mình loại bỏ kết quả  i = n và n % n = 0
+        if n % i == 0:
+            res.append(i)
+    for i in res:
+        total += i
+    print(total)
+sumOfAll(n)
+# Bài 59 Codelearn thực hành tìm số dư, nguyên tắc của số dư là tổng các ước số lớn hơn chính nó.
+n = int(input())
+
+def is_abundant(n):
+    res = []
+    tong = 0
+    for i in range(1, n):
+        if n % i == 0:
+            res.append(i)
+    for i in res:
+        tong += i
+    if tong > n:
+        print("True")
+    else:
+        print("False")
+is_abundant(n)

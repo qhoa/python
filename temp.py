@@ -352,3 +352,18 @@ def format(s):
     else:
         print(s)
 format(s)'''
+n = int(input())
+
+def is_abundant(n):
+    res = []
+    tong = 0
+    for i in range(1, n):
+        if n % i == 0:
+            res.append(i)
+    for i in res:
+        tong += i
+    if tong > n:
+        print("True")
+    else:
+        print("False")
+is_abundant(n)
