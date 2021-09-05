@@ -555,3 +555,33 @@ def format(s):
     else:
         print(s)
 format(s)
+
+# Bài 58 Codelearn thực hành tính tổng các ước số của số nhập vào từ bàn phím 8 => 1 + 3 + 4 = 7
+n = int(input())
+
+def sumOfAll(n):
+    res = []
+    total = 0
+    for i in range(1, n): # Bỏ qua giá trị n là chính mình loại bỏ kết quả  i = n và n % n = 0
+        if n % i == 0:
+            res.append(i)
+    for i in res:
+        total += i
+    print(total)
+sumOfAll(n)
+# Bài 59 Codelearn thực hành tìm số dư, nguyên tắc của số dư là tổng các ước số lớn hơn chính nó.
+n = int(input())
+
+def is_abundant(n):
+    res = []
+    tong = 0
+    for i in range(1, n):
+        if n % i == 0:
+            res.append(i)
+    for i in res:
+        tong += i
+    if tong > n:
+        print("True")
+    else:
+        print("False")
+is_abundant(n)
