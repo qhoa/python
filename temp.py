@@ -264,7 +264,7 @@ def is_prime(n):
 
 
 n = int(input())
-print(is_prime(n))'''
+print(is_prime(n))
 def is_prime(n):
     i = 1
     count = 0
@@ -278,3 +278,77 @@ def is_prime(n):
     return False
 n = int(input())
 print(is_prime(n))
+#Initial list
+res = []
+
+# Input lengths
+lengths = int(input())
+
+# Add element
+for i in range(lengths):
+    # Input elements
+    n = int(input())
+    res.append(n)
+
+def evenNum(res):
+    temp = []
+    for a in res:
+        if a % 2 == 0:
+            temp.append(a)
+    print(temp)
+
+evenNum(res)
+a = int(input())
+b = int(input())
+
+def power(a, b):
+    c = 0
+    c = a**b
+    print(int(c))
+power(a, b)
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a + b > c and a + c > b and b + c > a:
+    if a == b and b == c:
+        print("Equilateral triangle")
+    elif a == b or b == c or a == c:
+        print("Isosceles triangle")
+    else:
+        print("Scalene triangle")
+else:
+    print("không phải hình tam giác")
+str = "The quick brown fox jumps over the lazy dog"
+#r = str.split(" ")
+def char(str):
+    r = []
+    for i in str.split(" "):
+        if len(i) > 3:
+            r.append(i)
+    print(r)
+char(str)
+#Initial list
+res = []
+
+# Input lengths
+lengths = int(input())
+
+# Add element
+for i in range(lengths):
+    # Input elements
+    res.append(int(input()))
+
+for i in res:
+    print(i, end="")
+s = str(input())
+
+def format(s):
+    if len(s) >= 3:
+        if s[-3:] in "ing":
+            print(s + "ly")
+        else:
+            print(s + "ing")
+    else:
+        print(s)
+format(s)'''

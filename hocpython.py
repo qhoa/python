@@ -453,3 +453,105 @@ def is_prime(n):
 
 n = int(input())
 print(is_prime(n))
+
+# Bài 51 thực hành Codelearn viết hàm tìm số chẵn
+#Initial list
+res = []
+
+# Input lengths
+lengths = int(input())
+
+# Add element
+for i in range(lengths):
+    # Input elements
+    n = int(input())
+    res.append(n)
+
+
+def evenNum(res):
+    temp = []
+    for i in res:
+        if i % 2 == 0:
+            temp.append(i)
+    print(temp)
+
+evenNum(res)
+
+# Bài tập 52 Codelearn viết hàm tính bình phương của 2 số nhập vào ví dụ a , b = a^b
+a = int(input())
+b = int(input())
+
+def power(a, b):
+    c = 0
+    c = a**b
+    print(int(c))
+
+power(a, b)
+
+# Bài 53 Codelearn tìm ước số chung lớn nhất của 2 số nhập vào
+a = int(input())
+b = int(input())
+
+def gcd(a,b):
+    c = []
+    res = []
+    for i in range(1, a + 1):
+        if a % i == 0:
+            c.append(i)
+    for n in range(1, b + 1):
+        if b % n == 0 and n in c:
+            res.append(n)
+    print(res[-1])
+gcd(a,b)
+
+# Bài 54 Codelearn kiểm tra hình tam giác
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a + b > c and a + c > b and b + c > a:
+    if a == b and b == c:
+        print("Equilateral triangle")
+    elif a == b or b == c or a == c:
+        print("Isosceles triangle")
+    else:
+        print("Scalene triangle")
+else:
+    print("không phải hình tam giác")
+# Bài 55 Codelearn thực hành in ra màn hình chữ có hơn 3 ký tự trong 1 chuỗi nhập vào từ bàn phím
+str = input()
+def char(str):
+    r = []
+    for i in str.split(" "):
+        if len(i) > 3:
+            r.append(i)
+    print(r)
+char(str)
+
+# Bài 56 Codelearn thực hành in ra màn hình chuyển mảng thành chuỗi liền nhau [3, 4, 5] => 345
+#Initial list
+res = []
+
+# Input lengths
+lengths = int(input())
+
+# Add element
+for i in range(lengths):
+    # Input elements
+    n = int(input())
+    res.append(n)
+for i in res:
+    print(i, end="")
+
+s = str(input())
+
+# Bài 57 Codelearn thực hành in ra màn hình nếu 3 ký tự cuối là ing + ly, nếu nhỏ hơn 3 ký tự in ra màn hình, lớn hơn 3 ký tự + ing
+def format(s):
+    if len(s) >= 3:
+        if s[-3:] in "ing":
+            print(s + "ly")
+        else:
+            print(s + "ing")
+    else:
+        print(s)
+format(s)
